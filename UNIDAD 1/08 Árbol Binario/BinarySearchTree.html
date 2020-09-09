@@ -1,0 +1,72 @@
+<script>
+function Node(value){
+    this.value = value;
+    this.left =  null;
+    this.rigth =  null;
+}
+
+function BST(){
+    this.root = null;
+
+    this.add = BSTAdd;
+    this.search = BSTSearch;
+}
+    function BSTAdd(value,current = this.root){
+        if(!current){
+            this.root = new Node(value);
+            return true;
+        }
+        else{
+            if(value>current.value){
+                if(!current.rigth){
+                    current.rigth = new Node(value);
+                    return true;
+                }
+                else{
+                    this.add(value,current.rigth);
+                }
+            }
+            else if(value<current.value){
+                if(!current.left){
+                    current.left = new Node(value);
+                    return true;
+                }
+                else{
+                    this.add(value,current.left);
+                }
+            }
+            else{
+                return false;
+            }
+        }
+    }
+
+    function BSTSearch(value,current=this.root){
+
+        if(current){
+            if(current.value==value)
+                return true;
+            else if(value<current.value)
+                 return this.search(value,current.left);
+            else
+                return this.search(value,current.rigth);
+        }
+        else
+            return false; 
+    }
+
+
+seed = new BST();
+seed.add(32);
+seed.add(37);
+seed.add(22);
+seed.add(11);
+seed.add(25);
+seed.add(33);
+seed.add(60);
+console.log(seed);
+console.log(seed.search(32));
+console.log(seed.search(34));
+
+</script>
+
