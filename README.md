@@ -1,6 +1,6 @@
 # Contenido
 
-Este repositorio contiene todos los códigos desarrollados durante la clase de Algoritmos y Estructura de Datos se encuentran divididos en 3 unidades de acuerdo a las siguientes temáticas:
+Este repositorio contiene todos los códigos desarrollados durante la clase de Algoritmos y Estructura de Datos se encuentran divididos en 3 unidades de acuerdo a las siguientes temáticas:;
 
 **UNIDAD 1:**
 - Introducción al manejo de Algoritmos
